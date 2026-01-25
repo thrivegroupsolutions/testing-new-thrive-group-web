@@ -484,16 +484,31 @@ input:focus, textarea:focus{
   .contact{ grid-template-columns: 1fr; }
   .brand{ min-width: unset; }
 }
-/* ===== LOGO (Header) ===== */
+/* ===== FIX HEADER LOGO SIZE ===== */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
 .brand__logo{
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 10px;
   background: #fff;
   border: 1px solid rgba(11,27,58,0.10);
-  padding: 6px;
+  padding: 4px;
   box-shadow: 0 10px 26px rgba(11,27,58,0.08);
+  flex: 0 0 auto;
 }
+
+.brand__text{
+  display:flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+
 
 
