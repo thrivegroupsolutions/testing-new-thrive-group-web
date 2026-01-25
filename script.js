@@ -1,10 +1,10 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* ✅ CHANGE THESE 2 BEFORE USING LIVE */
-const COMPANY_PHONE = "+447000000000";      // with +, no spaces
-const COMPANY_WA = "447000000000";          // WhatsApp number without +
+/* ✅ CHANGE THESE BEFORE YOU USE LIVE */
+const COMPANY_PHONE = "+447000000000";   // with +, no spaces
+const COMPANY_WA = "447000000000";       // WhatsApp number without + and without spaces
 
-/* Update links */
+/* Update all links automatically */
 const links = [
   ["topCallBtn", `tel:${COMPANY_PHONE}`],
   ["contactPhone", `tel:${COMPANY_PHONE}`],
@@ -16,6 +16,7 @@ const links = [
   ["footerWA", `https://wa.me/${COMPANY_WA}`],
   ["stickyWA", `https://wa.me/${COMPANY_WA}`],
 ];
+
 links.forEach(([id, href]) => {
   const el = document.getElementById(id);
   if (el) el.setAttribute("href", href);
