@@ -502,6 +502,24 @@ input:focus, textarea:focus{
   box-shadow: 0 10px 26px rgba(11,27,58,0.08);
   flex: 0 0 auto;
 }
+/* ===== FOOTER LOGO ===== */
+.footer__brandRow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.footer__logo{
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 12px;
+  background:#fff;
+  border: 1px solid rgba(11,27,58,0.10);
+  padding: 6px;
+}
+
+
 
 
 
