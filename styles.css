@@ -484,3 +484,16 @@ input:focus, textarea:focus{
   .contact{ grid-template-columns: 1fr; }
   .brand{ min-width: unset; }
 }
+/* ===== LOGO (Header) ===== */
+.brand__logo{
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(11,27,58,0.10);
+  padding: 6px;
+  box-shadow: 0 10px 26px rgba(11,27,58,0.08);
+}
+
+
