@@ -6,7 +6,7 @@ const form = document.getElementById("quoteForm");
 const success = document.getElementById("successMsg");
 
 // Change this number to your real WhatsApp number (no +, no spaces)
-const WA_NUMBER = "447000000000";
+const WA_NUMBER = "447350074125";
 
 form.addEventListener("submit", function(e){
   e.preventDefault();
@@ -33,3 +33,4 @@ ${details}`;
   success.style.display = "block";
   form.reset();
 });
+
