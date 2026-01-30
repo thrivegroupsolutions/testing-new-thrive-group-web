@@ -37,7 +37,9 @@ body{
 a{ color:inherit; text-decoration:none; }
 .container{ max-width:var(--container); margin:0 auto; padding:0 18px; }
 
-/* Topbar */
+/* =========================
+   TOPBAR
+   ========================= */
 .topbar{
   position: sticky; top:0; z-index:50;
   backdrop-filter: blur(18px);
@@ -48,14 +50,25 @@ a{ color:inherit; text-decoration:none; }
   display:flex; align-items:center; justify-content:space-between;
   gap:14px; padding: 12px 0;
 }
+
+/* Brand */
 .brand{ display:flex; align-items:center; gap:12px; min-width: 280px; }
-.brand__mark{
-  width: 38px; height: 38px; border-radius: 14px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  box-shadow: 0 14px 40px var(--glow);
-}
+.brand__text{ display:flex; flex-direction:column; }
 .brand__name{ font-weight: 900; letter-spacing:-0.02em; }
 .brand__tag{ font-size:12px; color: var(--muted); margin-top:2px; }
+
+/* Header Logo (image) */
+.brand__logo{
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 14px;
+  background:#fff;
+  border: 1px solid rgba(15,23,42,0.10);
+  padding: 6px;
+  box-shadow: 0 10px 26px rgba(15,23,42,0.08);
+  flex: 0 0 auto;
+}
 
 .nav{ display:flex; gap: 16px; }
 .nav a{ color: var(--muted); font-weight: 800; font-size: 14px; }
@@ -63,7 +76,9 @@ a{ color:inherit; text-decoration:none; }
 
 .topbar__cta{ display:flex; gap: 10px; }
 
-/* Buttons */
+/* =========================
+   BUTTONS
+   ========================= */
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
   padding: 10px 14px;
@@ -81,12 +96,12 @@ a{ color:inherit; text-decoration:none; }
   color: white;
   box-shadow: 0 16px 45px var(--glow);
 }
-.btn--ghost{
-  background: rgba(255,255,255,0.75);
-}
+.btn--ghost{ background: rgba(255,255,255,0.75); }
 .btn--full{ width: 100%; padding: 12px 14px; }
 
-/* Hero */
+/* =========================
+   HERO
+   ========================= */
 .hero{ padding: 62px 0 18px; }
 .hero__grid{
   display:grid;
@@ -118,16 +133,24 @@ a{ color:inherit; text-decoration:none; }
 }
 .hero__buttons{ display:flex; gap:12px; flex-wrap:wrap; }
 
+/* Trust row (your pill style) */
 .trust{
-  display:flex; flex-wrap:wrap; gap: 10px 16px;
-  margin-top: 16px; color: var(--muted); font-size: 13px;
+  margin-top: 14px;
+  display:flex;
+  gap:10px;
+  flex-wrap: wrap;
 }
 .trust__item{
-  border-left: 1px solid rgba(15,23,42,0.12);
-  padding-left: 12px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.04);
+  border: 1px solid rgba(15,23,42,0.10);
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(15,23,42,0.78);
 }
-.trust__item:first-child{ border-left:none; padding-left:0; }
 
+/* Stats */
 .statsRow{
   margin-top: 16px;
   display:flex;
@@ -193,7 +216,9 @@ a{ color:inherit; text-decoration:none; }
   font-size: 13px;
 }
 
-/* Sections */
+/* =========================
+   SECTIONS
+   ========================= */
 .section{ padding: 54px 0; }
 .section--alt{
   background: rgba(255,255,255,0.65);
@@ -255,6 +280,7 @@ a{ color:inherit; text-decoration:none; }
 .workDesc{ margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
 .workCard__actions{ display:grid; gap: 10px; margin-top: auto; }
 
+/* Note box */
 .noteBox{
   margin-top: 14px;
   padding: 14px;
@@ -277,30 +303,6 @@ a{ color:inherit; text-decoration:none; }
   box-shadow: 0 14px 44px rgba(15,23,42,0.06);
 }
 .whyTitle{ font-weight: 900; margin-bottom: 8px; }
-
-.testimonials{
-  margin-top: 14px;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-.testimonial{
-  background: rgba(255,255,255,0.88);
-  border: 1px solid rgba(15,23,42,0.10);
-  border-radius: var(--radius);
-  padding: 16px;
-  box-shadow: 0 14px 44px rgba(15,23,42,0.06);
-}
-.testimonial p{
-  margin: 0;
-  line-height: 1.6;
-  color: rgba(15,23,42,0.88);
-}
-.tMeta{
-  margin-top: 10px;
-  font-size: 12px;
-  color: var(--muted);
-}
 
 /* Steps */
 .steps{
@@ -411,7 +413,6 @@ input:focus, textarea:focus{
   border-color: rgba(37,99,235,0.35);
   box-shadow: 0 0 0 4px rgba(37,99,235,0.12);
 }
-
 .success{
   display:none;
   margin-top: 12px;
@@ -421,10 +422,12 @@ input:focus, textarea:focus{
   border: 1px solid rgba(20,184,166,0.18);
 }
 
-/* Footer */
+/* =========================
+   FOOTER
+   ========================= */
 .footer{
   border-top: 1px solid rgba(15,23,42,0.10);
-  padding: 26px 0 70px;
+  padding: 26px 0 110px; /* space for sticky bar on mobile */
   background: rgba(255,255,255,0.65);
 }
 .footer__grid{
@@ -433,7 +436,25 @@ input:focus, textarea:focus{
   gap: 14px;
   align-items: start;
 }
+.footer__brandRow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 .footer__brand{ font-weight: 900; letter-spacing:-0.02em; }
+
+/* Footer Logo */
+.footer__logo{
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 14px;
+  background:#fff;
+  border: 1px solid rgba(15,23,42,0.10);
+  padding: 8px;
+  box-shadow: 0 10px 26px rgba(15,23,42,0.08);
+}
+
 .footer__links{ display:grid; gap: 10px; }
 .footer__links a{ color: var(--muted); }
 .footer__links a:hover{ color: var(--text); }
@@ -441,17 +462,21 @@ input:focus, textarea:focus{
 .footer__contact a{ color: var(--muted); }
 .footer__contact a:hover{ color: var(--text); }
 
-/* Sticky bar */
+/* =========================
+   STICKY BAR
+   ========================= */
 .stickyBar{
   position: fixed;
-  left: 0; right: 0; bottom: 0;
-  z-index: 60;
+  left: 12px; right: 12px; bottom: 12px;
+  z-index: 999;
   display:flex;
-  gap: 10px;
+  gap: 12px;
   padding: 12px;
-  background: rgba(255,255,255,0.84);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(15,23,42,0.10);
   backdrop-filter: blur(18px);
-  border-top: 1px solid rgba(15,23,42,0.10);
+  box-shadow: 0 18px 44px rgba(15,23,42,.14);
 }
 .stickyBtn{
   flex: 1;
@@ -468,10 +493,14 @@ input:focus, textarea:focus{
   box-shadow: 0 16px 45px var(--glow);
 }
 
-/* Responsive */
+/* Leave space for sticky bar always */
+body{ padding-bottom: 110px; }
+
+/* =========================
+   RESPONSIVE
+   ========================= */
 @media (max-width: 1100px){
   .whyGrid{ grid-template-columns: 1fr 1fr; }
-  .testimonials{ grid-template-columns: 1fr; }
 }
 @media (max-width: 980px){
   .nav{ display:none; }
@@ -483,106 +512,15 @@ input:focus, textarea:focus{
   .priceGrid{ grid-template-columns: 1fr; }
   .contact{ grid-template-columns: 1fr; }
   .brand{ min-width: unset; }
-}
-/* ===== FIX HEADER LOGO SIZE ===== */
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
+  .footer__grid{ grid-template-columns: 1fr; gap: 18px; }
+  .footer__logo{ width: 64px; height: 64px; }
 }
 
-.brand__logo{
-  width: 64px;      /* was 44px */
-  height: 64px;     /* was 44px */
-  object-fit: contain;
-  border-radius: 12px;
-  background: #fff;
-  border: 1px solid rgba(11,27,58,0.10);
-  padding: 6px;     /* was 4px */
-  box-shadow: 0 10px 26px rgba(11,27,58,0.08);
-  flex: 0 0 auto;
-}
-/* ===== FOOTER LOGO ===== */
-.footer__brandRow{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.footer__logo{
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  border-radius: 14px;
-  background:#fff;
-  border: 1px solid rgba(11,27,58,0.10);
-  padding: 8px;
-  box-shadow: 0 10px 26px rgba(11,27,58,0.08);
-}
-.trust{
-  margin-top: 14px;
-  display:flex;
-  gap:10px;
-  flex-wrap: wrap;
-}
-
-.trust__item{
-  padding: 10px 12px;
-  border-radius: 999px;
-  background: rgba(11,27,58,0.06);
-  border: 1px solid rgba(11,27,58,0.10);
-  font-weight: 600;
-  font-size: 14px;
-}
-/* --- Mobile fixes (single block) --- */
-@media (max-width: 920px){
-
-  /* make space so footer isn't hidden behind sticky bar */
-  body{ padding-bottom: 84px; }
-
-  /* sticky bar improvements */
+/* Hide sticky bar on desktop */
+@media (min-width: 981px){
   .stickyBar{
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-
-  .stickyBtn{
-    flex: 1;                 /* equal width buttons */
-    justify-content: center;
-  }
-
-  /* footer layout on mobile */
-  .footer__grid{
-    grid-template-columns: 1fr;
-    gap: 18px;
-    text-align: left;
-  }
-
-  .footer__contact{
-    justify-items: start;
-  }
-
-  .footer__logo{
-    width: 64px;
-    height: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(520px, calc(100% - 24px));
   }
 }
-
-/* optional: hide sticky bar on desktop */
-@media (min-width: 921px){
-  .stickyBar{ display:none; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
