@@ -534,6 +534,48 @@ input:focus, textarea:focus{
   font-weight: 600;
   font-size: 14px;
 }
+/* --- Mobile fixes (single block) --- */
+@media (max-width: 920px){
+
+  /* make space so footer isn't hidden behind sticky bar */
+  body{ padding-bottom: 84px; }
+
+  /* sticky bar improvements */
+  .stickyBar{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .stickyBtn{
+    flex: 1;                 /* equal width buttons */
+    justify-content: center;
+  }
+
+  /* footer layout on mobile */
+  .footer__grid{
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: left;
+  }
+
+  .footer__contact{
+    justify-items: start;
+  }
+
+  .footer__logo{
+    width: 64px;
+    height: 64px;
+  }
+}
+
+/* optional: hide sticky bar on desktop */
+@media (min-width: 921px){
+  .stickyBar{ display:none; }
+}
+
+
 
 
 
